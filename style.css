@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+  --primary-cyan: hsl(172, 67%, 45%);
+  --dark-cyan: hsl(183, 100%, 15%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  height: 100%;
+  background: var(--light-gray-cyan);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin: 3vh 0 3vh 0;
+  color: var(--dark-cyan);
+  text-align: center;
+  color: var(--grayish-cyan);
+}
+
+input, button {
+  font-size: 24px;
+}
+
+button {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+button:hover, input:hover {
+  filter: brightness(75%);
+}
+
+/* container */
+
+.container {
+  background: #fff;
+  width: 40vw;
+  height: 70vh;
+  border-radius: 18px;
+  padding: 25px;
+}
+
+/* tipInfo */
+
+/* bill amount */
+
+.bill {
+  margin: 15px 0;
+}
+
+.bill > p {
+  margin-bottom: 5px;
+  color: var(--grayish-cyan);
+}
+
+input {
+  text-align: right;
+  padding-right: 5px;
+  color: var(--dark-cyan);
+  border: none;
+  background: var(--light-gray-cyan);
+  border-radius: 5px;
+  width: 300px;
+}
+
+.bill > input::placeholder {
+  text-align: end;
+}
+
+.bill > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* select tip */
+
+.selectTip > p {
+  margin-bottom: 5px;
+  color: var(--grayish-cyan);
+}
+
+
+button {
+  color: #fff;
+  background: var(--dark-cyan);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 25px;
+}
+
+.options > input {
+  text-align: end;
+  padding: 5px 25px;
+  width: 150px;
+}
+
+.options > input::placeholder {
+  text-align: center;
+}
+
+.selectTip > .custom {
+  color: var(--grayish-cyan);
+  background: var(--very-light-grayish-cyan)
+}
+
+/* number of people */
+
+.numOfPeople {
+  margin-top: 15px;
+}
+
+.numOfPeople > p {
+  color: var(--grayish-cyan);
+  margin-bottom: 5px;
+}
+
+/* final amount */ 
+
+.final {
+  margin-top: 25px;
+  background: var(--dark-cyan);
+  border-radius: 5px;
+  padding: 15px;
+  color: var(--very-light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+}
+
+.final > h2 {
+  text-align: center;
+}
+
+.tipAmount {
+  margin: 15px 0;
+}
+
+.total {
+  margin: 15px 0;
+}
+
+.money {
+  color: var(--primary-cyan);
+  font-size: 2rem;
+}
+
+.reset {
+  background-color: var(--dark-cyan);
+  filter: brightness(120%);
+  color: var(--primary-cyan)
+}
+
+/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+  height: 35px;
+  width: 100%;
+}
+
+.attribution { 
+  font-size: 14px; 
+  text-align: center; 
+  padding: 10px;
+}
+    
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 1768px) {
+  .container {
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .container {
+    height: 80vh;
+  }
+
+  .bigInput {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .container {
+    height: 90vh;
+  }
+
+  .bigInput {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    height: 100vh;
+  }
+
+  .bigInput {
+    width: 150px;
+  }
+}

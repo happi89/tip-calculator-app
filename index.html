@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- page container -->
+  <div id="pageContainer">
+    <header>
+      <h1 class="main">SPLI<br>TTER</h1>
+    </header>
+
+    <!-- tip input info container -->
+    <div class="container">
+      <main>
+
+        <!-- tip input info -->
+        <div class="tipInfo">
+
+          <!-- bill price without tip -->
+          <div class="bill">
+            <p>Bill</p>
+            <input class="bigInput" type="number" placeholder="0">
+          </div>
+          
+          <!-- select tip percetage -->
+          <div class="selectTip">
+            <p>Select Tip %</p>
+            <div class="options">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input type="number" class="custom" placeholder="Custom"></input>
+            </div>
+          </div>
+          
+          <!-- select num of people -->
+          <div class="numOfPeople">
+            <p>Number of People</p>
+            <input class="bigInput" type="number" placeholder="0">
+          </div>
+      </div>
+      
+      <!-- final amount -->
+      <div class="final">
+
+        <!-- final header -->
+        <h2>Amount Due</h2>
+
+        <!-- tip total -->
+        <div class="tipAmount">
+          <h3>Tip Amount / person</h3>
+          <h2 class="money">$0.00</h2>
+        </div>
+        
+        <!-- total bill with tip-->
+        <div class="total">
+          <h3>Total / person</h3>
+          <h2 class="money">$0.00</h2>
+        </div>
+
+        <!-- reset button -->
+        <button class="reset">Reset</button>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer class="attribution">
+      Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by<a href="https://github.com/happi89">&nbsp;happi89</a>.
+    </footer>
+  </div>
+
+  <!-- scriptjs -->
+  <script src="script.js"></script>
+</body>
+</html>
