@@ -29,26 +29,26 @@
           <!-- bill price without tip -->
           <div class="bill">
             <p>Bill</p>
-            <input class="bigInput" type="number" placeholder="0">
+            <input class="bigInput" type="number" placeholder="0" id="bill">
           </div>
           
           <!-- select tip percetage -->
           <div class="selectTip">
             <p>Select Tip %</p>
             <div class="options">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <input type="number" class="custom" placeholder="Custom"></input>
+              <button id="5">5%</button>
+              <button id="10">10%</button>
+              <button id="15">15%</button>
+              <button id="25">25%</button>
+              <button id="50">50%</button>
+              <input type="number" class="custom" id="customAmount" placeholder="Custom"></input>
             </div>
           </div>
           
           <!-- select num of people -->
           <div class="numOfPeople">
             <p>Number of People</p>
-            <input class="bigInput" type="number" placeholder="0">
+            <input class="bigInput" type="number" placeholder="0" id="numOfPeople">
           </div>
       </div>
       
@@ -61,17 +61,17 @@
         <!-- tip total -->
         <div class="tipAmount">
           <h3>Tip Amount / person</h3>
-          <h2 class="money">$0.00</h2>
+          <h2 class="money" id="tipAmount">$0.00</h2>
         </div>
         
         <!-- total bill with tip-->
         <div class="total">
           <h3>Total / person</h3>
-          <h2 class="money">$0.00</h2>
+          <h2 class="money" id="total">$0.00</h2>
         </div>
 
         <!-- reset button -->
-        <button class="reset">Reset</button>
+        <button class="reset" id="resetBtn">Reset</button>
       </main>
     </div>
 
