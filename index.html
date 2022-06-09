@@ -1,87 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator App - Frontendmentor Challenge</title>
 </head>
 <body>
-
-    <!-- page container -->
-  <div id="pageContainer">
-    <header>
-      <h1 class="main">SPLI<br>TTER</h1>
-    </header>
-
-    <!-- tip input info container -->
     <div class="container">
-      <main>
-
-        <!-- tip input info -->
-        <div class="tipInfo">
-
-          <!-- bill price without tip -->
-          <div class="bill">
-            <p>Bill</p>
-            <input class="bigInput" type="number" placeholder="0" id="bill">
-          </div>
-          
-          <!-- select tip percetage -->
-          <div class="selectTip">
-            <p>Select Tip %</p>
-            <div class="options">
-              <button id="5">5%</button>
-              <button id="10">10%</button>
-              <button id="15">15%</button>
-              <button id="25">25%</button>
-              <button id="50">50%</button>
-              <input type="number" class="custom" id="customAmount" placeholder="Custom"></input>
-            </div>
-          </div>
-          
-          <!-- select num of people -->
-          <div class="numOfPeople">
-            <p>Number of People</p>
-            <input class="bigInput" type="number" placeholder="0" id="numOfPeople">
-          </div>
-      </div>
-      
-      <!-- final amount -->
-      <div class="final">
-
-        <!-- final header -->
-        <h2>Amount Due</h2>
-
-        <!-- tip total -->
-        <div class="tipAmount">
-          <h3>Tip Amount / person</h3>
-          <h2 class="money" id="tipAmount">$0.00</h2>
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo">
         </div>
         
-        <!-- total bill with tip-->
-        <div class="total">
-          <h3>Total / person</h3>
-          <h2 class="money" id="total">$0.00</h2>
-        </div>
+        <div class="card">
+            <div class="input">
+                <div class="bill-container">
+                    <div class="label-wrapper">
+                        <label for="inp-bill">Bill</label>
+                    </div>
 
-        <!-- reset button -->
-        <button class="reset" id="resetBtn">Reset</button>
-      </main>
+                    <div class="inp-wrapper">
+                        <input class="inp-text" type="text" name="inp-bill" id="inp-bill" placeholder="0.0">
+                        <img src="./images/icon-dollar.svg" alt="dollar-icon">
+                    </div>
+                </div>
+
+                <div class="tip-container">
+                    <div class="label-wrapper">
+                        <label for="inp-tip">Select Tip %</label>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="btn tip">5%</div>
+                        <div class="btn tip">10%</div>
+                        <div class="btn tip btn-active">15%</div>
+                        <div class="btn tip">25%</div>
+                        <div class="btn tip">50%</div>
+                        <input class="inp-text" type="text" name="inp-tip" id="inp-tip" placeholder="Custom">
+                    </div>
+                </div>
+
+                <div class="people-container">
+                    <div class="label-wrapper">
+                        <label for="inp-people">Number of People</label>
+                        <div class="error-msg">Can't be zero</div>
+                    </div>
+
+                    <div class="inp-wrapper">
+                        <input class="inp-text" type="text" name="inp-people" id="inp-people" placeholder="1">
+                        <img src="./images/icon-person.svg" alt="person-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="output">
+                <div class="line-wrapper">
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Tip Amount</div>
+                            <div class="desc">/ person</div>
+                        </div>
+                        <div class="value" id="tipAmount">$0.00</div>
+                    </div>
+
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Total</div>
+                            <div class="desc">/ person</div>
+                        </div>
+                        <div class="value" id="totalAmount">$0.00</div>
+                    </div>
+                </div>
+                <div class="btn reset">Reset</div>
+            </div>
+        </div>
     </div>
 
-    <!-- footer -->
-    <footer class="attribution">
-      Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by<a href="https://github.com/happi89">&nbsp;happi89</a>.
-    </footer>
-  </div>
-
-  <!-- scriptjs -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
